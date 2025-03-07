@@ -4,7 +4,9 @@ using VeterinaryApp.Models;
 
 namespace VeterinaryApp.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<VeterinaryApplicationUser>
+
+    public class ApplicationDbContext : IdentityDbContext<VeterinaryAppUser>
+
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -13,6 +15,7 @@ namespace VeterinaryApp.Data
         public DbSet<Owner> Owners { get; set; }
         public DbSet<Pet> Pets { get; set; }
         public DbSet<Vaccine> Vaccines { get; set; }
-       
+
+
     }
 }
